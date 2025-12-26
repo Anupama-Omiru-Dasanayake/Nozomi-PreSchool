@@ -56,6 +56,14 @@ html{
     }
 }
 
+.nozomi-logo{
+    width: 260px;
+}
+
+section{
+    padding: 5rem 10%;
+}
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -245,6 +253,33 @@ html{
 }
 
 
+.home{
+    padding: 0;
+
+    .slide{
+        display: flex;
+        align-items: center;
+        height: 60rem;
+        background-size: cover !important;
+        background-position: center !important;
+
+        .content{
+            width: 50rem;
+
+            h3{
+                @include titleText(5rem);
+                color: $white;
+            }
+
+            p{
+                @include graphText(1.6rem);
+                color: $light-white;
+                padding: 1rem 0;
+
+            }
+        }
+    }
+}
 
 
 
@@ -281,8 +316,81 @@ html{
 
 
 
+.footer{
+    background: $light-green;
 
+    .box-container{
+        @include grid(25rem);
 
+        .box{
+            h3{
+                @include titleText(2.2rem);
+                padding:1rem 0;
+
+                i{
+                    color: $pink;
+                }
+
+            }
+
+            .share{
+                margin-top: 1rem;
+
+                a{
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    line-height: 4.5rem;
+                    font-size: 1.7rem;
+                    background-color: $pink;
+                    color: $white;
+                    margin-right: .3rem;
+                    text-align: center;
+
+                    &:hover{
+                        background-color: $black;
+                    }
+                }
+            }
+
+            .link{
+                @include graphText(1.7rem);
+                padding: .5rem 0 ;
+                display: block;
+
+                &:hover{
+                    color: $pink;
+                    text-decoration: underline;
+                }
+            }
+
+            p{
+                @include graphText(1.5rem);
+                padding: 1rem 0;
+            }
+
+            .email{
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                font-size: 1.6rem;
+                border: $border ;
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+
+    .credit{
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 3rem;
+
+        @include titleText(2rem);
+        border-top: $border;
+        span{
+            color: $pink;
+        }
+    }
+}
 
 
 
@@ -299,6 +407,9 @@ html{
     .header{
         padding: 2rem 5;
     }
+    section{
+        padding: 3rem 5%;
+    }
 }
 
 @media (max-width:991px){
@@ -308,6 +419,10 @@ html{
     
     .header{
         padding: 2rem;
+    }
+
+    section{
+        padding: 3rem 2rem;
     }
 }
 

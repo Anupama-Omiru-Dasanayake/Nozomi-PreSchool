@@ -24,6 +24,14 @@ html::-webkit-scrollbar-thumb {
   background: rgb(255, 0, 149);
 }
 
+.nozomi-logo {
+  width: 260px;
+}
+
+section {
+  padding: 5rem 10%;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -186,9 +194,109 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
 }
 
+.home {
+  padding: 0;
+}
+.home .slide {
+  display: flex;
+  align-items: center;
+  height: 60rem;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.home .slide .content {
+  width: 50rem;
+}
+.home .slide .content h3 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+.home .slide .content p {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #777;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+.footer {
+  background: #fff1fb;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 1rem 0;
+}
+.footer .box-container .box h3 i {
+  color: rgb(255, 0, 149);
+}
+.footer .box-container .box .share {
+  margin-top: 1rem;
+}
+.footer .box-container .box .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  background-color: rgb(255, 0, 149);
+  color: #fff;
+  margin-right: 0.3rem;
+  text-align: center;
+}
+.footer .box-container .box .share a:hover {
+  background-color: #444;
+}
+.footer .box-container .box .link {
+  font-size: 1.7rem;
+  line-height: 2;
+  color: #777;
+  padding: 0.5rem 0;
+  display: block;
+}
+.footer .box-container .box .link:hover {
+  color: rgb(255, 0, 149);
+  text-decoration: underline;
+}
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  padding: 1rem 0;
+}
+.footer .box-container .box .email {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.6rem;
+  border: 0.1rem solid rgb(255, 0, 149);
+  margin-bottom: 1rem;
+}
+.footer .credit {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  border-top: 0.1rem solid rgb(255, 0, 149);
+}
+.footer .credit span {
+  color: rgb(255, 0, 149);
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 2rem 5;
+  }
+  section {
+    padding: 3rem 5%;
   }
 }
 @media (max-width: 991px) {
@@ -197,6 +305,9 @@ html::-webkit-scrollbar-thumb {
   }
   .header {
     padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
   }
 }
 @media (max-width: 768px) {
