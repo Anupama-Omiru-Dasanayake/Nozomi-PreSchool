@@ -36,7 +36,28 @@ document.querySelector('#close-form').onclick = () => {
 var swiper = new Swiper(".home-slider", {
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
       loop:true,
       grabCursor:true,
+    });
+
+
+var swiper = new Swiper(".home-courses-slider", {
+      loop:true,
+      grabCursor:true,
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        991: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      },
     });

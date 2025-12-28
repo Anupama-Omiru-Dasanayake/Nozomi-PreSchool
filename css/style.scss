@@ -10,7 +10,11 @@
     text-decoration: none;
     transition: all .2s linear;
 }
-$pink: rgb(255, 0, 149);
+
+img{
+    user-select: none;
+}
+$pink: rgb(223, 0, 130);
 $light-green: #fff1fb;
 $light-color: #777;
 $light-white: #eee;
@@ -63,6 +67,13 @@ html{
 section{
     padding: 5rem 10%;
 }
+
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    @include titleText(3.5rem);
+}
+
 
 .btn{
     display: inline-block;
@@ -282,13 +293,111 @@ section{
 }
 
 
+.swiper-pagination-bullet-active{
+    background: $pink;
+}
+
+.subjects{
+    .box-container{
+        @include grid(16rem);
+
+        .box{
+            padding: 3rem 2rem;
+            text-align: center;
+            border: $border;
+            background: $light-green;
+
+            cursor: pointer;
+
+            &:hover{
+                background: $pink;
+
+                h3{
+                    color: $white;
+
+                }
+
+                p{
+                    color: $light-white;
+                }
+            }
+
+            img{
+                width: 15rem;
+                height: 15rem ;
+                border-radius: 50%;
+                margin-bottom: 0.7rem;
+            }
+
+            h3{
+                @include titleText(1.7rem);
+                padding: 2rem 0;
+            }
+
+            p{
+                @include graphText(1.5rem);
+            }
+        }
+    }
+}
 
 
 
+.home-courses{
+    .slide{
+        text-align: center;
+        position: relative;
+        width: 30rem;
+        background: $light-green;
+        overflow: hidden;
+        border: $border;
+        
 
+        &:hover .content{
+            bottom: 0;
+        }
 
+        .image{
+            padding: 2rem;
+            
+            
+            
 
+            img{
+                width: 100%;
+                margin-bottom: 1.5rem;
+                
+            }
 
+            h3{
+                @include titleText(2rem);
+            }
+        }
+
+        .content{
+            position: absolute;
+            bottom: -100%; right: 0; left: 0;
+            background: $pink;
+            padding: 2rem 3rem;
+
+            h3{
+                @include titleText(2rem);
+                color: $white;
+
+            }
+
+            p{
+                padding: 1rem 0;
+                @include graphText(1.5rem);
+                color: $light-white;
+            }
+
+            .btn:hover{
+                background: $black;
+            }
+        }
+    }
+}
 
 
 
@@ -460,10 +569,18 @@ section{
             }
         }
     }
+
+    .home .slide .content h3{
+        font-size: 3rem;
+    }
 }
 
 @media (max-width:450px){
     html{
         font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
     }
 }

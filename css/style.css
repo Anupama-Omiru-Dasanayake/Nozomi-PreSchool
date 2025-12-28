@@ -10,6 +10,12 @@
   transition: all 0.2s linear;
 }
 
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -21,7 +27,7 @@ html::-webkit-scrollbar-track {
   background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: rgb(255, 0, 149);
+  background: rgb(223, 0, 130);
 }
 
 .nozomi-logo {
@@ -32,19 +38,27 @@ section {
   padding: 5rem 10%;
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 3rem;
   font-size: 1.8rem;
-  border: 0.1rem solid rgb(255, 0, 149);
+  border: 0.1rem solid rgb(223, 0, 130);
   background: #fff1fb;
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
   cursor: pointer;
   text-transform: capitalize;
 }
 .btn:hover {
-  background: rgb(255, 0, 149);
+  background: rgb(223, 0, 130);
   color: #fff;
 }
 
@@ -71,7 +85,7 @@ section {
   width: 260px;
 }
 .header .logo .logo-text {
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
   margin-left: 10px;
 }
 .header .navbar {
@@ -96,7 +110,7 @@ section {
   color: #444;
 }
 .header .navbar a:hover {
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
 }
 .header .icons div {
   cursor: pointer;
@@ -105,7 +119,7 @@ section {
   margin-left: 1.5rem;
 }
 .header .icons div:hover {
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
 }
 .header #menu-btn {
   display: none;
@@ -142,7 +156,7 @@ section {
   transform: rotate(90deg);
 }
 .account-form form {
-  border: 0.1rem solid rgb(255, 0, 149);
+  border: 0.1rem solid rgb(223, 0, 130);
   padding: 2rem;
   display: none;
 }
@@ -159,7 +173,7 @@ section {
 .account-form form .box {
   width: 100%;
   padding: 1.2rem 1.4rem;
-  border: 0.1rem solid rgb(255, 0, 149);
+  border: 0.1rem solid rgb(223, 0, 130);
   font-size: 1.6rem;
   margin: 0.7rem 0;
 }
@@ -181,7 +195,7 @@ section {
 }
 .account-form form .flex a:hover {
   text-decoration: underline;
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
 }
 .account-form form .btn {
   width: 100%;
@@ -190,7 +204,7 @@ section {
   margin: 0 0.5rem;
 }
 .account-form .buttons .btn.active {
-  background: rgb(255, 0, 149);
+  background: rgb(223, 0, 130);
   color: #fff;
 }
 
@@ -221,6 +235,97 @@ section {
   padding: 1rem 0;
 }
 
+.swiper-pagination-bullet-active {
+  background: rgb(223, 0, 130);
+}
+
+.subjects .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+.subjects .box-container .box {
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 0.1rem solid rgb(223, 0, 130);
+  background: #fff1fb;
+  cursor: pointer;
+}
+.subjects .box-container .box:hover {
+  background: rgb(223, 0, 130);
+}
+.subjects .box-container .box:hover h3 {
+  color: #fff;
+}
+.subjects .box-container .box:hover p {
+  color: #eee;
+}
+.subjects .box-container .box img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-bottom: 0.7rem;
+}
+.subjects .box-container .box h3 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 2rem 0;
+}
+.subjects .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+.home-courses .slide {
+  text-align: center;
+  position: relative;
+  width: 30rem;
+  background: #fff1fb;
+  overflow: hidden;
+  border: 0.1rem solid rgb(223, 0, 130);
+}
+.home-courses .slide:hover .content {
+  bottom: 0;
+}
+.home-courses .slide .image {
+  padding: 2rem;
+}
+.home-courses .slide .image img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.home-courses .slide .image h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.home-courses .slide .content {
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  left: 0;
+  background: rgb(223, 0, 130);
+  padding: 2rem 3rem;
+}
+.home-courses .slide .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+.home-courses .slide .content p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  color: #eee;
+}
+.home-courses .slide .content .btn:hover {
+  background: #444;
+}
+
 .footer {
   background: #fff1fb;
 }
@@ -236,7 +341,7 @@ section {
   padding: 1rem 0;
 }
 .footer .box-container .box h3 i {
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
 }
 .footer .box-container .box .share {
   margin-top: 1rem;
@@ -246,7 +351,7 @@ section {
   width: 4.5rem;
   line-height: 4.5rem;
   font-size: 1.7rem;
-  background-color: rgb(255, 0, 149);
+  background-color: rgb(223, 0, 130);
   color: #fff;
   margin-right: 0.3rem;
   text-align: center;
@@ -262,7 +367,7 @@ section {
   display: block;
 }
 .footer .box-container .box .link:hover {
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
   text-decoration: underline;
 }
 .footer .box-container .box p {
@@ -275,7 +380,7 @@ section {
   width: 100%;
   padding: 1.2rem 1.4rem;
   font-size: 1.6rem;
-  border: 0.1rem solid rgb(255, 0, 149);
+  border: 0.1rem solid rgb(223, 0, 130);
   margin-bottom: 1rem;
 }
 .footer .credit {
@@ -285,10 +390,10 @@ section {
   font-size: 2rem;
   text-transform: capitalize;
   color: #444;
-  border-top: 0.1rem solid rgb(255, 0, 149);
+  border-top: 0.1rem solid rgb(223, 0, 130);
 }
 .footer .credit span {
-  color: rgb(255, 0, 149);
+  color: rgb(223, 0, 130);
 }
 
 @media (max-width: 1200px) {
@@ -339,9 +444,15 @@ section {
     text-align: center;
     font-size: 3rem;
   }
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
