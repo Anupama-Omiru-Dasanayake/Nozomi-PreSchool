@@ -34,30 +34,83 @@ document.querySelector('#close-form').onclick = () => {
 };
 
 var swiper = new Swiper(".home-slider", {
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      loop:true,
-      grabCursor:true,
-    });
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    loop:true,
+    grabCursor:true,
+});
 
 
 var swiper = new Swiper(".home-courses-slider", {
-      loop:true,
-      grabCursor:true,
+    loop:true,
+    grabCursor:true,
 
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        991: {
-          slidesPerView: 2,
-          spaceBetween: 50,
-        },
-      },
+    breakpoints: {
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+    },
+    991: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+    },
+    },
+});
+
+
+
+var swiper = new Swiper(".teachers-slider", {
+    loop:true,
+    grabCursor:true,
+
+    breakpoints: {
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+    },
+    768: {
+        slidesPerView:3,
+        spaceBetween: 40,
+    },
+    991: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+    },
+    },
+});
+
+
+var swiper = new Swiper(".reviews-slider", {
+    loop:true,
+    grabCursor:true,
+
+    breakpoints: {
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+    },
+    768: {
+        slidesPerView:3,
+        spaceBetween: 50,
+    },
+    991: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+    },
+    },
+});
+
+
+document.querySelector('.load-more .btn').onclick = () =>{
+    document.querySelectorAll('.gallery .box-container .hide').forEach(show =>{
+        show.style.display = 'block';
     });
+
+    document.querySelector('.load-more .btn').style.display = 'none';
+}

@@ -68,6 +68,30 @@ section{
     padding: 5rem 10%;
 }
 
+
+.heading-link{
+    text-align: center;
+    background: url(../images/1408.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h3{
+        @include titleText(4rem);
+    }
+    p{
+        @include graphText(2rem);
+
+        a{
+            color: $pink;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
 .heading{
     text-align: center;
     margin-bottom: 3rem;
@@ -347,7 +371,7 @@ section{
     .slide{
         text-align: center;
         position: relative;
-        width: 30rem;
+        
         background: $light-green;
         overflow: hidden;
         border: $border;
@@ -399,22 +423,213 @@ section{
     }
 }
 
+//history here 
+
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .image{
+        flex: 1 1 40rem;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .content{
+        flex: 1 1 40rem;
+
+
+        .about-title{
+            @include titleText(3rem);
+        }
+
+        p{
+            @include graphText(1.5rem);
+            padding: 1rem 0;
+        }
+
+        .icons-container{
+            margin-top: 1rem;
+            @include grid(16rem);
+
+            .icons{
+                
+                text-align: center;
+                padding: 3rem 2rem;
+                border: $border;
+                background: $light-green;
+
+                img{
+                    height: 5rem;
+                    margin-bottom: .7rem;
+                }
+
+                h3{
+                    padding: .5rem 0;
+                    @include titleText(3rem);
+                }
+
+                span{
+                    @include graphText(1.5rem);
+                }
+            }
+        }
+    }
+}
+
+
+.teachers{
+    .slide{
+        text-align: center;
+        
+
+        &:hover{
+            .image{
+                img{
+                    background: $pink;
+                }
+                .share{
+                    bottom: 0;
+                }
+            }
+            
+        }
+
+
+        .image{
+            position: relative;
+            overflow: hidden;
+
+            img{
+                background: $light-green;
+                width: 100%;
+            }
+
+            .share{
+                position: absolute;
+                bottom: -10rem; left:0; right: 0;
+                background: rgba(0,0,0,.8);
+                padding: 2rem;
+
+                a{
+                    font-size: 3rem;
+                    margin: 0 1rem;
+                    color: $white;
+
+                    &:hover{
+                        color: $pink;
+                    }
+                }
+            }
+        }
+
+        .content{
+            display: flex;
+            padding-top: 1rem;
+            align-items: center;
+            justify-content: space-between;
+
+
+            h3{
+                @include titleText(2rem);
+            }
+            span{
+                @include graphText(1.5rem);
+            }
+        }
+    }
+}
 
 
 
+.reviews{
+    .slide{
+        text-align: center;
+        
+        p{
+            @include graphText(1.5rem);
+            position: relative;
+            background: $light-green;
+            border: $border;
+            margin-bottom: 3rem;
+            padding: 2rem;
 
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -1.2rem; left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                background: $light-green;
+                border-bottom: $border;
+                border-right: $border;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
 
+        img{
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
 
+        }
+        h3{
+            @include titleText(2.2rem);
+            padding: .5rem 0;
 
+        }
+        .stars{
+            font-size: 1.2rem;
+            color: $pink;
+        }
+    }
+}
 
+.gallery{
+    .box-container{
+        @include grid(40rem);
 
+        .box{
 
+            &:hover .image img{
+                transform: scale(1.1);
+            }
 
+            &.hide{
+                display: none;
+            }
+            .image{
+                height: 25rem;
+                overflow: hidden;
+                position: relative;
 
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
 
+                h3{
+                    @include titleText(1.5rem);
+                    position: absolute;
+                    top: 1rem; left: 1rem;
+                    padding: .5rem 1.5rem;
+                    background: $white;
+                }
+                
+            }
+        }
+    }
 
-
-
+    .load-more{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
 
 
 
@@ -519,6 +734,9 @@ section{
     section{
         padding: 3rem 5%;
     }
+    .nozomi-logo{
+        width: 25rem;
+    }
 }
 
 @media (max-width:991px){
@@ -532,6 +750,9 @@ section{
 
     section{
         padding: 3rem 2rem;
+    }
+    .nozomi-logo{
+        width: 25rem;
     }
 }
 
@@ -573,6 +794,9 @@ section{
     .home .slide .content h3{
         font-size: 3rem;
     }
+    .nozomi-logo{
+        width: 25rem;
+    }
 }
 
 @media (max-width:450px){
@@ -582,5 +806,13 @@ section{
 
     .heading{
         font-size: 3rem;
+    }
+
+    .about .content .about-title{
+        font-size: 4rem;
+    }
+
+    .nozomi-logo{
+        width: 25rem;
     }
 }

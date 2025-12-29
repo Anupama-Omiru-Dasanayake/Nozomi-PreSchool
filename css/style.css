@@ -38,6 +38,29 @@ section {
   padding: 5rem 10%;
 }
 
+.heading-link {
+  text-align: center;
+  background: url(../images/1408.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.heading-link h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.heading-link p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #777;
+}
+.heading-link p a {
+  color: rgb(223, 0, 130);
+}
+.heading-link p a:hover {
+  text-decoration: underline;
+}
+
 .heading {
   text-align: center;
   margin-bottom: 3rem;
@@ -281,7 +304,6 @@ section {
 .home-courses .slide {
   text-align: center;
   position: relative;
-  width: 30rem;
   background: #fff1fb;
   overflow: hidden;
   border: 0.1rem solid rgb(223, 0, 130);
@@ -324,6 +346,188 @@ section {
 }
 .home-courses .slide .content .btn:hover {
   background: #444;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.about .image {
+  flex: 1 1 40rem;
+}
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 40rem;
+}
+.about .content .about-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.about .content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  padding: 1rem 0;
+}
+.about .content .icons-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+.about .content .icons-container .icons {
+  text-align: center;
+  padding: 3rem 2rem;
+  border: 0.1rem solid rgb(223, 0, 130);
+  background: #fff1fb;
+}
+.about .content .icons-container .icons img {
+  height: 5rem;
+  margin-bottom: 0.7rem;
+}
+.about .content .icons-container .icons h3 {
+  padding: 0.5rem 0;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.about .content .icons-container .icons span {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+.teachers .slide {
+  text-align: center;
+}
+.teachers .slide:hover .image img {
+  background: rgb(223, 0, 130);
+}
+.teachers .slide:hover .image .share {
+  bottom: 0;
+}
+.teachers .slide .image {
+  position: relative;
+  overflow: hidden;
+}
+.teachers .slide .image img {
+  background: #fff1fb;
+  width: 100%;
+}
+.teachers .slide .image .share {
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+}
+.teachers .slide .image .share a {
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: #fff;
+}
+.teachers .slide .image .share a:hover {
+  color: rgb(223, 0, 130);
+}
+.teachers .slide .content {
+  display: flex;
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.teachers .slide .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.teachers .slide .content span {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+.reviews .slide {
+  text-align: center;
+}
+.reviews .slide p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  position: relative;
+  background: #fff1fb;
+  border: 0.1rem solid rgb(223, 0, 130);
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+.reviews .slide p::before {
+  content: "";
+  position: absolute;
+  bottom: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background: #fff1fb;
+  border-bottom: 0.1rem solid rgb(223, 0, 130);
+  border-right: 0.1rem solid rgb(223, 0, 130);
+  height: 2rem;
+  width: 2rem;
+}
+.reviews .slide img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+.reviews .slide h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 0.5rem 0;
+}
+.reviews .slide .stars {
+  font-size: 1.2rem;
+  color: rgb(223, 0, 130);
+}
+
+.gallery .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem;
+}
+.gallery .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+.gallery .box-container .box.hide {
+  display: none;
+}
+.gallery .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+}
+.gallery .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery .box-container .box .image h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #fff;
+}
+.gallery .load-more {
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .footer {
@@ -403,6 +607,9 @@ section {
   section {
     padding: 3rem 5%;
   }
+  .nozomi-logo {
+    width: 25rem;
+  }
 }
 @media (max-width: 991px) {
   html {
@@ -413,6 +620,9 @@ section {
   }
   section {
     padding: 3rem 2rem;
+  }
+  .nozomi-logo {
+    width: 25rem;
   }
 }
 @media (max-width: 768px) {
@@ -447,6 +657,9 @@ section {
   .home .slide .content h3 {
     font-size: 3rem;
   }
+  .nozomi-logo {
+    width: 25rem;
+  }
 }
 @media (max-width: 450px) {
   html {
@@ -454,5 +667,11 @@ section {
   }
   .heading {
     font-size: 3rem;
+  }
+  .about .content .about-title {
+    font-size: 4rem;
+  }
+  .nozomi-logo {
+    width: 25rem;
   }
 }/*# sourceMappingURL=style.css.map */
