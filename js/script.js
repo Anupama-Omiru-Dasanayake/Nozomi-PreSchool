@@ -107,10 +107,30 @@ var swiper = new Swiper(".reviews-slider", {
 });
 
 
-document.querySelector('.load-more .btn').onclick = () =>{
+document.querySelector('.load-more-sport .btn').onclick = () =>{
     document.querySelectorAll('.gallery .box-container .hide').forEach(show =>{
         show.style.display = 'block';
     });
 
-    document.querySelector('.load-more .btn').style.display = 'none';
+    document.querySelector('.load-more-sport .btn').style.display = 'none';
+}
+
+
+
+document.querySelector('.load-more-activity .btn').onclick = () =>{
+    document.querySelectorAll('.gallery .box-container .hide').forEach(show =>{
+        show.style.display = 'block';
+    });
+
+    document.querySelector('.load-more-activity .btn').style.display = 'none';
+}
+
+
+
+document.querySelector('.load-more-concert .btn').onclick = () =>{
+    document.querySelectorAll('.gallery .box-container .hide').forEach(show =>{
+        show.style.display = 'block';
+    });
+
+    document.querySelector('.load-more-concert .btn').style.display = 'none';
 }

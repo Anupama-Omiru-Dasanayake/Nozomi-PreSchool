@@ -625,13 +625,108 @@ section{
         }
     }
 
-    .load-more{
+    .load-more-sport{
         margin-top: 2rem;
         text-align: center;
     }
+
+    .load-more-activity{
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .load-more-concert{
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+
 }
 
 
+.contact{
+    
+    .icons-container{
+        margin-bottom: 8rem;
+        @include grid(25rem);
+
+        .icons{
+            text-align: center;
+            padding: 3rem 2rem;
+            border: $border;
+            background: $light-green;
+
+            i{
+                height: 6rem;
+                width: 6rem;
+                line-height: 6rem;
+                font-size: 2rem;
+                border-radius: 50%;
+                margin-bottom: .5rem;
+                color: $white;
+                background: $pink;
+            }
+
+            h3{
+                @include titleText(2rem);
+                padding: .5rem 0;
+            }
+
+            p{
+                @include graphText(1.5rem)
+            }
+        }
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0rem;
+
+        .image{
+            flex: 1 1 12rem;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        form{
+            flex: 1 1 40rem;
+            border: $border;
+            padding: 2rem;
+
+            h3{
+                @include titleText(2.5rem);
+                padding-bottom: 1rem;
+            }
+
+            .box{
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                border: $border;
+                font-size: 1.6rem;
+                margin: .7rem 0;
+
+                &:focus{
+                    background: $pink;
+                    color: $white;
+
+                    &::placeholder{
+                        color: $light-white;
+                    }
+                }
+            }
+
+            textarea{
+                height: 15rem;
+                resize: none;
+            }
+        }
+    }
+    
+}
 
 
 

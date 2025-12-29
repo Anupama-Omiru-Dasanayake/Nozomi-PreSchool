@@ -525,9 +525,95 @@ section {
   padding: 0.5rem 1.5rem;
   background: #fff;
 }
-.gallery .load-more {
+.gallery .load-more-sport {
   margin-top: 2rem;
   text-align: center;
+}
+.gallery .load-more-activity {
+  margin-top: 2rem;
+  text-align: center;
+}
+.gallery .load-more-concert {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact .icons-container {
+  margin-bottom: 8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+.contact .icons-container .icons {
+  text-align: center;
+  padding: 3rem 2rem;
+  border: 0.1rem solid rgb(223, 0, 130);
+  background: #fff1fb;
+}
+.contact .icons-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  background: rgb(223, 0, 130);
+}
+.contact .icons-container .icons h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 0.5rem 0;
+}
+.contact .icons-container .icons p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+.contact .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0rem;
+}
+.contact .row .image {
+  flex: 1 1 12rem;
+}
+.contact .row .image img {
+  width: 100%;
+}
+.contact .row form {
+  flex: 1 1 40rem;
+  border: 0.1rem solid rgb(223, 0, 130);
+  padding: 2rem;
+}
+.contact .row form h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #444;
+  padding-bottom: 1rem;
+}
+.contact .row form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.1rem solid rgb(223, 0, 130);
+  font-size: 1.6rem;
+  margin: 0.7rem 0;
+}
+.contact .row form .box:focus {
+  background: rgb(223, 0, 130);
+  color: #fff;
+}
+.contact .row form .box:focus::-moz-placeholder {
+  color: #eee;
+}
+.contact .row form .box:focus::placeholder {
+  color: #eee;
+}
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
 }
 
 .footer {
