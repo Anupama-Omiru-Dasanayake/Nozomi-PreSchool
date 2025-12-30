@@ -728,8 +728,89 @@ section{
     
 }
 
+.faq{
+    .accordion-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: flex-start;
+
+        .accordion{
+            flex: 1 1 40rem;
+            border: $border;
 
 
+            &.active{
+                .accordion-heading{
+                    background: $pink;
+
+                    h3{
+                        color: $white;
+                    }
+
+                    i{
+                        color: $white;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .accordion-content{
+                    display: block;
+                }
+            }
+
+            .accordion-heading{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                cursor: pointer;
+                padding: 1.5rem;
+
+                h3{
+                    @include titleText(2rem);
+                }
+
+                i{
+                    font-size: 2rem;
+                    color: $pink;
+                }
+            }
+
+            .accordion-content{
+                padding: 1.5rem;
+                @include graphText(1.5rem);
+                border-top: $border;
+                display: none;
+            }
+        }
+    }
+}
+
+
+.logo-container{
+    text-align: center;
+    
+
+    .srilanka-flag{
+        height: 10rem;
+
+    }
+    .japan-flag{
+        height: 10rem;
+    }
+
+    .nozomi-logo{
+        padding-top: 2.5rem;
+    }
+
+    
+
+    img{
+        
+        pointer-events: none;
+    }
+}
 
 
 

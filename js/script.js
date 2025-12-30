@@ -107,6 +107,46 @@ var swiper = new Swiper(".reviews-slider", {
 });
 
 
+var swiper = new Swiper(".logo-slider", {
+    loop:true,
+    grabCursor:true,
+
+    breakpoints: {
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+    },
+    450: {
+        slidesPerView:2,
+        spaceBetween: 50,
+    },
+    768: {
+        slidesPerView:2,
+        spaceBetween: 50,
+    },
+    991: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+    },
+    1200: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+    },
+    },
+});
+
+
+let accordion = document.querySelectorAll('.faq .accordion-container .accordion');
+
+
+accordion.forEach(acco =>{
+    acco.onclick = () =>{
+        accordion.forEach(dion => dion.classList.remove('active'));
+        acco.classList.toggle('active');
+    };
+});
+
+
 document.querySelector('.load-more-sport .btn').onclick = () =>{
     document.querySelectorAll('.gallery .box-container .hide').forEach(show =>{
         show.style.display = 'block';
@@ -126,11 +166,10 @@ document.querySelector('.load-more-activity .btn').onclick = () =>{
 }
 
 
-
 document.querySelector('.load-more-concert .btn').onclick = () =>{
     document.querySelectorAll('.gallery .box-container .hide').forEach(show =>{
         show.style.display = 'block';
     });
 
     document.querySelector('.load-more-concert .btn').style.display = 'none';
-}
+};
